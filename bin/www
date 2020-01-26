@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('ibloov:server');
+var debug = require('debug')('docdey-backend:server');
 var http = require('http');
 
 /**
