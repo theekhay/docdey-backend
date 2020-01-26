@@ -1,9 +1,9 @@
 define({
-  "name": "Ibloov API Documentation",
+  "name": "Docdey API Documentation",
   "version": "0.1.0",
-  "description": "Ibloov API documentaton - consumer documenatation",
+  "description": "Docdey API documentaton - consumer documenatation",
   "title": "Taxbase API Documentation",
-  "url": "https://api-ibloov.com/v1",
+  "url": "https://api-docdey.com/v1",
   "sampleUrl": false,
   "defaultVersion": "0.0.0",
   "apidoc": "0.3.0",

@@ -1,7 +1,7 @@
 version: "2"
 services:
   app:
-    container_name: ibloov-current
+    container_name: docdey-current
     restart: always
     build: .
     ports:
