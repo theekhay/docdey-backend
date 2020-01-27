@@ -5,14 +5,25 @@ var Schema = mongoose.Schema;
 
 var MedicaitonSchema = new Schema({
 
-    drug: {
+    drugs: [{
         
         name: String,
         id: String
+    }],
+
+    name: {
+        
+        name: String
     },
 
     dosage: {
-        type: Array
+        type: Number,
+        required: true
+    },
+
+    dosageTimes: {
+        type: Array,
+        required: true
     },
 
     dosageStart: {
