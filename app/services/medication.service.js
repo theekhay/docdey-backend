@@ -63,4 +63,20 @@ module.exports = {
         const updateData = { deletedAt: Date.now(), deletedBy: '1edfhuio3ifj' };
         return await module.exports.updateWishlist(medicationId, updateData); 
     },
+
+    activeMedication: async (userId) => {
+
+        let checkDate = new Date();
+        console.log(checkDate);
+        return await Medication.find(
+            {
+                userId: userId,
+                dosageStart: { $lte: checkDate },
+                // dosageEnd: { $gte:checkDate }
+            },
+            {
+                dosageTimes: 1
+            }  
+        )
+    }
 }

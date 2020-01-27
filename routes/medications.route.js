@@ -4,6 +4,7 @@ const MedicationController = require('@controllers/medications.controller');
 
 router.get('/', MedicationController.index);
 
-// router.post('/create', MedicationController.create);
+router.get('/getActiveMedication', MedicationController.activeMedication);
+
 
 module.exports = router;
