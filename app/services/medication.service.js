@@ -75,7 +75,7 @@ module.exports = {
                 // dosageEnd: { $gte:checkDate }
             },
             {
-                dosageTimes: 1
+                "dosageTimes": 1
             }  
         )
     }

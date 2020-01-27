@@ -32,7 +32,7 @@ module.exports = {
         try{
             let userId = "5e2b1f3bfc7b63475cdd8be3";
             let meds = await service.activeMedication(userId);
-            let dosageTimes = meds[0].dosageTimes;
+            let dosageTimes = (meds.length > 0 ) ?  meds[0].dosageTimes : {};
             console.log(dosageTimes);
             return res.status(200).json({
                 successful: true,
@@ -40,14 +40,14 @@ module.exports = {
                 data: dosageTimes,
             });
         }
-        catch(err)
+        catch(err){}
         {
 
             return res.status(400).json({
 
                 successful: false,
                 message: "Error getting active medications",
-                data: err.toString(),
+                data: err,
             });
         }
     }
