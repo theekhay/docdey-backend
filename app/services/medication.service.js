@@ -67,7 +67,8 @@ module.exports = {
     activeMedication: async (userId) => {
 
         let checkDate = new Date();
-        console.log(checkDate);
+        console.log("checkDate, userId");
+        console.log(checkDate, userId);
         return await Medication.find(
             {
                 userId: userId,
@@ -75,7 +76,7 @@ module.exports = {
                 // dosageEnd: { $gte:checkDate }
             },
             {
-                "dosageTimes": 1
+                dosageTimes: 1
             }  
         )
     }
