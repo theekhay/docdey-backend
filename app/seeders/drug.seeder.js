@@ -38,15 +38,26 @@ const seedDrugs = async (req, res) => {
 
 
 const drugFactory =  () => {
+
+    const components = [
+        {
+            name: faker.lorem.word(),
+            quanity: `${faker.random.number(10)}mls`
+        },
+        {
+            name: faker.lorem.word(),
+            quanity: `${faker.random.number(10)}mls`
+        }
+    ]
     
     const drug = {
 
         name: faker.lorem.word(),
-        components: [faker.lorem.words() ],
-        sideEffects: [faker.lorem.words() ],
-        commonBrands: [faker.lorem.words()],
+        components: components,
+        sideEffects: faker.lorem.words().split(' '),
+        commonBrands: faker.lorem.words().split(' '),
         dosage: faker.lorem.word(),
-        variants: [faker.lorem.words()],
+        variants: faker.lorem.words().split(' '),
         uuid: faker.random.uuid(),
 
         createdAt: new Date,
