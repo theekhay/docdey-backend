@@ -29,7 +29,7 @@ index = async (req, res) => {
 
 
 /**
- * create a new wishlist
+ * create a new appointment
  */
 create = async (req, res) => {
 

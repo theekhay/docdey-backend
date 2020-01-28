@@ -16,6 +16,11 @@ var MedicaitonSchema = new Schema({
         name: String
     },
 
+    userId: {
+        type: String,
+        required: true
+    },
+
     dosage: {
         type: Number,
         required: true
@@ -51,11 +56,11 @@ var MedicaitonSchema = new Schema({
         type: String
     },
 
-    status: {
-        type: String,
-        allowedValues: ["ACTIVE", "COMPLETED", "PENDING"],
-        required: true
-    },
+    // status: {
+    //     type: String,
+    //     allowedValues: ["ACTIVE", "COMPLETED", "PENDING"],
+    //     required: true
+    // },
 
     history: [{
         event: String,
@@ -70,7 +75,8 @@ var MedicaitonSchema = new Schema({
     }, 
     
     deletedBy: {
-        type: String
+        type: String,
+        default: null
     }
 
 });
