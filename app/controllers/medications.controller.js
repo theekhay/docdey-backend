@@ -30,12 +30,11 @@ module.exports = {
         try {
             let userId = req.params.userId;
             let meds = await service.activeMedication(userId);
-            let dosageTimes = (meds.length > 0) ? meds[0].dosageTimes : {};
-            console.log(dosageTimes);
+            console.log(meds);
             return res.status(200).json({
                 successful: true,
                 message: "Medications retreived successfully",
-                data: dosageTimes,
+                data: meds,
             });
         } catch (err) {} {
 
