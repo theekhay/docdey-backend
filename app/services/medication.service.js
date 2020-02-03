@@ -73,7 +73,7 @@ module.exports = {
             {
                 userId: userId,
                 dosageStart: { $lte: checkDate },
-                // dosageEnd: { $gte:checkDate }
+                dosageEnd: { $gte:checkDate }
             },
             {
                 dosageTimes: 1

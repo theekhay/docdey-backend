@@ -58,6 +58,8 @@ module.exports = {
         medication.uuid = uuidv4();
 
         try {
+
+            //make sure that no other medication exists in this period
             await service.createMedication(medication);
             return res.status(200).send({
                 success: true,
