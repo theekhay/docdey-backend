@@ -5,8 +5,7 @@ var Schema = mongoose.Schema;
 var components = new Schema({
 
     name: String, 
-    quantity: Number,
-    measurementUnit: String
+    quantity: String,
 })
 
 var interactions = new Schema({
@@ -15,10 +14,7 @@ var interactions = new Schema({
     interaction: String
 })
 
-var variants = new Schema({
 
-    name: String
-})
 
 var DrugSchema = new Schema({
 
@@ -55,7 +51,7 @@ var DrugSchema = new Schema({
     }, 
     
     variants: {
-        type: [variants]
+        type: Array
     },
 
     createdAt: {

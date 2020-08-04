@@ -4,7 +4,7 @@ const DrugController = require('@controllers/drugs.controller');
 
 router.get('/', DrugController.index);
 
-router.get('/create', DrugController.create);
+router.post('/create', DrugController.create);
 
 router.get('/interaction/:drug1/:drug2', DrugController.getInteraction );
 

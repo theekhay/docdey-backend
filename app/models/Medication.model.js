@@ -5,14 +5,30 @@ var Schema = mongoose.Schema;
 
 var MedicaitonSchema = new Schema({
 
-    drug: {
+    drugs: [{
         
         name: String,
         id: String
+    }],
+
+    name: {
+        
+        name: String
+    },
+
+    userId: {
+        type: String,
+        required: true
     },
 
     dosage: {
-        type: Array
+        type: Number,
+        required: true
+    },
+
+    dosageTimes: {
+        type: Array,
+        required: true
     },
 
     dosageStart: {
@@ -40,11 +56,11 @@ var MedicaitonSchema = new Schema({
         type: String
     },
 
-    status: {
-        type: String,
-        allowedValues: ["ACTIVE", "COMPLETED", "PENDING"],
-        required: true
-    },
+    // status: {
+    //     type: String,
+    //     allowedValues: ["ACTIVE", "COMPLETED", "PENDING"],
+    //     required: true
+    // },
 
     history: [{
         event: String,
@@ -59,7 +75,8 @@ var MedicaitonSchema = new Schema({
     }, 
     
     deletedBy: {
-        type: String
+        type: String,
+        default: null
     }
 
 });
